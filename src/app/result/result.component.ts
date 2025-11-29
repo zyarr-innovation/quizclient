@@ -66,26 +66,26 @@ export class ResultComponent {
   }
 
   OnSubmit() {
-    alert('Submission is closed now!')
-    // this.quizService.submitScore().subscribe(async (data: any) => {
-    //   //this.restart();
-    //   this.isResultSubmitted = true;
-    //   try {
-    //     const encryptedData = await this.encryptionService.encryptResults(data);
-    //     console.log('Encrypted Data:', encryptedData);
+    //alert('Submission is closed now!')
+    this.quizService.submitScore().subscribe(async (data: any) => {
+      //this.restart();
+      this.isResultSubmitted = true;
+      try {
+        const encryptedData = await this.encryptionService.encryptResults(data);
+        console.log('Encrypted Data:', encryptedData);
 
-    //     // Send the encrypted data via email or other methods
-    //     this.sendEmail(encryptedData);
-    //   } catch (error) {
-    //     console.error('Error encrypting data:', error);
-    //   }
-    // });
+        // Send the encrypted data via email or other methods
+        this.sendEmail(encryptedData);
+      } catch (error) {
+        console.error('Error encrypting data:', error);
+      }
+    });
   }
 
   sendEmail(encryptedData: string) {
     // Define the mailto link with pre-filled email data
     const email = 'zy.innovator@gmail.com';
-    const subject = 'Quiz Results - ' + this.quizService.getSubject();
+    const subject = 'Momin Girls High School - Quiz Results:' + this.quizService.getSubject();
     const body = `Hello,\n\nHere are the encrypted quiz results:\n\n${encodeURIComponent(
       encryptedData
     )}`;
