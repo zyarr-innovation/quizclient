@@ -1,52 +1,175 @@
+/* ===================================
+   Question Display Component
+   Design System: Soft Modern Blue
+   =================================== */
+
+/* Main Container */
 .question-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .question-card {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .question-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  
-  .question-column {
-    width: 48%;
-  }
-  
-  mat-card {
-    padding: 20px;
-  }
-  
-  h3, h4 {
-    margin-top: 10px;
-  }
-  
-  mat-list-item {
-    padding: 10px;
-    margin: 5px 0;
-    cursor: pointer;
-  }
-  
-  /* Highlight correct answer */
-  .correct-answer {
-    background-color: #d4edda; /* Light green */
-  }
-  
-  mat-list-item:hover {
-    background-color: #f1f1f1; /* Hover effect for better UX */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+/* Question Card */
+mat-card.question-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  transition: all 0.15s ease-in-out;
+}
+
+mat-card.question-card:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Header */
+mat-card-header {
+  margin-bottom: 24px;
+}
+
+mat-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2563EB;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* Card Content */
+mat-card-content {
+  padding: 0;
+}
+
+/* Question Row Layout */
+.question-row {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* Question Column */
+.question-column {
+  flex: 1;
+  min-width: 0;
+}
+
+.question-column p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1E293B;
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+}
+
+/* Material List Reset */
+mat-list {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Option Items */
+mat-list-item {
+  background: #F4F6F8;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1E293B;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  min-height: auto;
+  height: auto;
+  margin: 0;
+}
+
+mat-list-item:hover {
+  background: #E8F1FF;
+  border-color: #2563EB;
+}
+
+/* Correct Answer Highlight */
+mat-list-item.correct-answer {
+  background: #F0FDF4;
+  border-color: #16A34A;
+  color: #1E293B;
+  font-weight: 500;
+}
+
+mat-list-item.correct-answer:hover {
+  background: #DCFCE7;
+}
+
+/* Urdu Text Styling */
+.question-column.urdu-text {
+  direction: rtl;
+  text-align: right;
+}
+
+.urdu-options {
+  font-family: 'Noto Nastaliq Urdu', sans-serif;
+  direction: rtl;
+  unicode-bidi: embed;
+  text-align: right;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .question-container {
+    padding: 24px 16px;
   }
 
-  .question-column .urdu-options {
-    --mdc-list-list-item-label-text-font: 'Noto Nastaliq Urdu', sans-serif !important;
-    direction: rtl;
-    unicode-bidi: embed;
+  mat-card.question-card {
+    padding: 16px;
   }
-  
+
+  mat-card-header {
+    margin-bottom: 16px;
+  }
+
+  .question-row {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .question-column {
+    width: 100%;
+  }
+
+  mat-card-title {
+    font-size: 15px;
+  }
+
+  .question-column p {
+    font-size: 14px;
+  }
+
+  mat-list-item {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .question-container {
+    padding: 16px 12px;
+    gap: 16px;
+  }
+
+  mat-card.question-card {
+    padding: 12px;
+  }
+
+  mat-list-item {
+    padding: 8px 12px;
+  }
+}

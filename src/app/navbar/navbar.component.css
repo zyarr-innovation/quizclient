@@ -1,23 +1,87 @@
-/* Space between the title and button */
-.toolbar-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .spacer {
-    flex: 1 1 auto;
-  }
-  
+/* ============================================
+   NAVBAR COMPONENT - QUIZ APPLICATION
+   Design System: Soft Modern Minimalism
+   ============================================ */
+
+/* ---- Toolbar Container ---- */
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  height: 64px;
+  background-color: #2563EB;
+  color: #FFFFFF;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+/* ---- Title/Brand ---- */
+mat-toolbar span:first-child {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+
+/* ---- Spacer ---- */
+.spacer {
+  flex: 1 1 auto;
+}
+
+/* ---- Sign Out Button ---- */
+button[mat-icon-button] {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  color: #FFFFFF;
+  transition: all 0.15s ease-in-out;
+}
+
+button[mat-icon-button]:hover {
+  background-color: #1D4ED8;
+  transform: scale(1.05);
+}
+
+button[mat-icon-button]:active {
+  transform: scale(0.98);
+}
+
+button[mat-icon-button]:focus {
+  outline: 2px solid #E8F1FF;
+  outline-offset: 2px;
+}
+
+/* ---- Icon Styling ---- */
+button[mat-icon-button] mat-icon {
+  font-size: 1.25rem;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+}
+
+/* ---- Responsive Design ---- */
+@media (max-width: 480px) {
   mat-toolbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #607d8b; /* Custom blue-grey color */
-    color: black;
+    padding: 0 16px;
+    height: 56px;
   }
-  
+
+  mat-toolbar span:first-child {
+    font-size: 1.125rem;
+  }
+
   button[mat-icon-button] {
-    width: 48px;
-    height: 48px;
+    width: 36px;
+    height: 36px;
   }
-  
+
+  button[mat-icon-button] mat-icon {
+    font-size: 1.125rem;
+    width: 18px;
+    height: 18px;
+  }
+}

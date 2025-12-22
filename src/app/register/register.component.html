@@ -2,15 +2,13 @@
   
   <mat-card>
     <mat-card-header>
-      <mat-card-title>
-        <h2>Quiz Registration</h2>
-      </mat-card-title>
+      <mat-card-title>Quiz Registration</mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <div class="logo-container">
-        <img src="/assets/img/logo.png" alt="Logo" class="logo">
+        <img src="./assets/img/logo.png" alt="Quiz Application Logo" class="logo">
       </div>
-      <form #registerForm="ngForm" (ngSubmit)="OnSubmit(Name.value)">
+      <form #registerForm="ngForm" (ngSubmit)="OnSubmit(Name.value)" aria-label="Quiz registration form">
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>Name</mat-label>
           <input matInput type="text" name="Name" #Name ngModel required />
@@ -25,30 +23,15 @@
         -->
 
         <div class="button-container">
-          <button
-            mat-raised-button
-            color="primary"
-            type="submit"
-            [disabled]="!registerForm.valid"
-          >
-            Start
-          </button>
-          <button
-            mat-raised-button
-            color="primary"
-            type="button"
-            (click)="navigateToReview()"
-          >
-            Revise
-          </button>
-          <button
-            mat-raised-button
-            color="primary"
-            type="button"
-            (click)="navigateToDashboard()"
-          >
-            Dashboard
-          </button>
+          <button mat-raised-button color="primary" type="submit" [disabled]="!registerForm.valid" aria-label="Start quiz">
+  Start
+</button>
+<button mat-raised-button color="primary" type="button" (click)="navigateToReview()" aria-label="Review previous quizzes">
+  Revise
+</button>
+<button mat-raised-button color="primary" type="button" (click)="navigateToDashboard()" aria-label="Go to dashboard">
+  Dashboard
+</button>
         </div>
       </form>
     </mat-card-content>

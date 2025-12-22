@@ -1,14 +1,140 @@
-/* Style for the mat-card */
+/* ============================================
+   DASHBOARD COMPONENT - QUIZ APPLICATION
+   Design System: Soft Modern Minimalism
+   ============================================ */
+
+/* ---- Card Container ---- */
 mat-card {
-  margin: 20px;
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  margin: 24px auto;
+  padding: 32px;
+  max-width: 1200px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
 }
 
-/* Table styles */
+/* ---- Card Title ---- */
+mat-card mat-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1E293B;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+/* ---- Card Content ---- */
+mat-card-content {
+  padding: 0;
+}
+
+/* ---- Table Container (Responsive Wrapper) ---- */
+.mat-elevation-z8 {
+  box-shadow: none !important; /* Remove Material's heavy shadow */
+  overflow-x: auto; /* Enable horizontal scroll on mobile */
+}
+
+/* ---- Table Base ---- */
 table {
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  overflow: hidden; /* Ensure border radius applies */
+}
+
+.table-container {
+  overflow-x: auto;
+  border-radius: 10px;
+}
+
+/* ---- Table Headers ---- */
+th.mat-header-cell {
+  background-color: #F4F6F8;
+  color: #1E293B;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-align: left;
+  padding: 16px;
+  border-bottom: 1px solid #E5E7EB;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* ---- Table Cells ---- */
+td.mat-cell {
+  padding: 16px;
+  color: #1E293B;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.5;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+/* ---- Table Rows ---- */
+tr.mat-header-row {
+  height: auto;
+}
+
+tr.mat-row {
+  height: auto;
+  background-color: #FFFFFF;
+  transition: background-color 0.15s ease-in-out;
+}
+
+/* Alternating row colors for better readability */
+tr.mat-row:nth-child(even) {
+  background-color: #FAFBFC;
+}
+
+/* Hover state */
+tr.mat-row:hover {
+  background-color: #E8F1FF;
+  cursor: pointer;
+}
+
+/* Remove bottom border from last row */
+tr.mat-row:last-child td {
+  border-bottom: none;
+}
+
+/* ---- Responsive Design ---- */
+@media (max-width: 768px) {
+  mat-card {
+    margin: 16px;
+    padding: 24px;
+  }
+
+  mat-card mat-card-title {
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+  }
+
+  th.mat-header-cell,
+  td.mat-cell {
+    padding: 12px;
+    font-size: 0.875rem;
+  }
+
+  th.mat-header-cell {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  mat-card {
+    margin: 12px;
+    padding: 16px;
+  }
+
+  th.mat-header-cell,
+  td.mat-cell {
+    padding: 8px;
+    font-size: 0.8125rem;
+  }
+
+  th.mat-header-cell {
+    font-size: 0.75rem;
+  }
 }

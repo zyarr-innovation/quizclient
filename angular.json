@@ -34,7 +34,7 @@
           "configurations": {
             "production": {
               "outputPath": "docs",
-              "baseHref": "/quizclient/",
+              "baseHref": "/momin-girls/",
               "budgets": [
                 {
                   "type": "initial",
