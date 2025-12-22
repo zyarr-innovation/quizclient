@@ -5,17 +5,17 @@
       <table mat-table [dataSource]="sortedData" class="mat-elevation-z8">
         <ng-container matColumnDef="name">
           <th mat-header-cell *matHeaderCellDef>Name</th>
-          <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+          <td mat-cell *matCellDef="let element">{{ element.message_data.name }}</td>
         </ng-container>
 
         <ng-container matColumnDef="score">
           <th mat-header-cell *matHeaderCellDef>Score</th>
-          <td mat-cell *matCellDef="let element">{{ element.Score }}</td>
+          <td mat-cell *matCellDef="let element">{{ element.message_data.Score }}</td>
         </ng-container>
 
         <ng-container matColumnDef="timeSpent">
           <th mat-header-cell *matHeaderCellDef>Time Spent</th>
-          <td mat-cell *matCellDef="let element">{{ element.TimeSpent }}</td>
+          <td mat-cell *matCellDef="let element">{{ element.message_data.TimeSpent }}</td>
         </ng-container>
 
         <!-- Header Row -->
