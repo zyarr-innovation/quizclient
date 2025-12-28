@@ -5,6 +5,7 @@ import { ResultComponent } from './result/result.component';
 import { AuthGuard } from './auth/auth.guard';
 import { QuestionDisplayComponent } from './question-display/question-display.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { QuestionSelectorComponent } from './question-selector/question-selector.component';
 
 export const routes: Routes = [
   // { path: 'register', component: RegisterComponent },
@@ -13,6 +14,7 @@ export const routes: Routes = [
   { path: 'revise', component: QuestionDisplayComponent },
   { path: 'review', component: QuestionDisplayComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'select', component: QuestionSelectorComponent},
   { path: 'en', component: RegisterComponent }, // Route for English
   { path: 'ur', component: RegisterComponent }, // Route for Urdu
   { path: '', redirectTo: '/en', pathMatch: 'full' },

@@ -1,0 +1,56 @@
+<div class="question-container">
+  <mat-card
+    *ngFor="let q of questionsEnglish; let i = index"
+    class="question-card"
+  >
+    <mat-card-header>
+      <mat-checkbox
+        (change)="toggleSelection(q.id, $event.checked)"
+      >
+        Question {{ q.id }}
+      </mat-checkbox>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="question-row">
+        <!-- English -->
+        <div class="question-column">
+          <p>{{ questionsEnglish[i].question }}</p>
+          <mat-list>
+            <mat-list-item
+              *ngFor="let opt of questionsEnglish[i].options; let k = index"
+              [ngClass]="getCorrectAnswerClass(i, k, 'en')"
+            >
+              {{ opt }}
+            </mat-list-item>
+          </mat-list>
+        </div>
+
+        <!-- Urdu -->
+        <div class="question-column urdu-text">
+          <p>{{ questionsUrdu[i].question }}</p>
+          <mat-list>
+            <mat-list-item
+              *ngFor="let opt of questionsUrdu[i]?.options; let j = index"
+              class="urdu-options"
+              [ngClass]="getCorrectAnswerClass(i, j, 'ur')"
+            >
+              {{ opt }}
+            </mat-list-item>
+          </mat-list>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- SAVE BUTTON -->
+  <div style="text-align: center; margin-top: 32px;">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="saveSelectedQuestions()"
+    >
+      Save Selected Questions
+    </button>
+  </div>
+</div>

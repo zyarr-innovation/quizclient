@@ -689,7 +689,8 @@
             "30%",
             "40%",
             "50%"
-        ]
+        ],
+        "answer": 3
     },
     {
         "id": 64,
@@ -2019,7 +2020,8 @@
             "5.5-7.5",
             "1.5-3.5",
             "6.5-8.5"
-        ]
+        ],
+        "answer": 3
     },
     {
         "id": 185,
@@ -2084,7 +2086,8 @@
             "70%",
             "90%",
             "100%"
-        ]
+        ],
+        "answer": 3
     },
     {
         "id": 191,
@@ -2391,7 +2394,8 @@
             "Insulin and glucagon",
             "Adrenaline (epinephrine) and cortisol",
             "Thyroxine and calcitonin"
-        ]
+        ],
+        "answer": 3
     },
     {
         "id": 219,
@@ -2743,18 +2747,7 @@
             "Bone Marrow",
             "Lymph Nodes"
         ],
-        "answer": 2
-    },
-    {
-        "id": 250,
-        "question": "What is the primary function of the spleen in the immune system??",
-       "options": [
-            "To produce B-cells",
-            "To filter blood and store white blood cells",
-            "To produce red blood cells",
-            "To mature T-cells"
-        ],
-        "answer": 2
+        "answer": 3
     },
     {
         "id": 251,
@@ -3523,226 +3516,6 @@
             "By isolating sensory inputs.",
             "By combining inputs from multiple sources to form a coherent picture of the environment.",
             "By ignoring irrelevant sensory datA)"
-        ],
-        "answer": 3
-    },
-    {
-        "id": 321,
-        "question": "What are sensory thresholds?",
-        "options": [
-            "A measure of how much stimuli is ignoreD)",
-            "The level at which stimuli are detected, which varies among individuals.",
-            "The average sensory response time.",
-            "The ability to perceive only certain senses."
-        ],
-        "answer": 2
-    },
-    {
-        "id": 322,
-        "question": "How does multisensory integration affect perception?",
-        "options": [
-            "It creates confusion.",
-            "It enhances perception, such as when sight influences taste.",
-            "It reduces sensory feedback.",
-            "It limits sensory experiences."
-        ],
-        "answer": 2
-    },
-    {
-        "id": 323,
-        "question": "What determines a person’s eye color?",
-        "options": [
-            "The number of eyelash follicles.",
-            "The amount and type of pigments in the iris.",
-            "The size of the corneA)",
-            "The number of rods and cones in the retinA)"
-        ],
-        "answer": 2
-    },
-    {
-        "id": 324,
-        "question": "Which cells are responsible for night vision in humans?",
-        "options": [
-            "Cone cells.",
-            "Rod cells.",
-            "Retinal ganglion cells.",
-            "Macula cells."
-        ],
-        "answer": 2
-    },
-    {
-        "id": 325,
-        "question": "What is color blindness?",
-        "options": [
-            "An inability to see colors at night.",
-            "The inability to see shapes clearly.",
-            "A condition where individuals cannot perceive certain colors.",
-            "The inability to see light."
-        ],
-        "answer": 3
-    },
-    {
-        "id": 326,
-        "question": "What allows the human eye to adapt to different light conditions?",
-        "options": [
-            "Rod cells.",
-            "Cones in the retinA)",
-            "The lens.",
-            "The iris."
-        ],
-        "answer": 4
-    },
-    {
-        "id": 327,
-        "question": "How do the eyes maintain binocular vision?",
-        "options": [
-            "By focusing on multiple objects at once.",
-            "By moving in unison to keep focus on a single point.",
-            "By using only one eye for focus.",
-            "By rotating independently."
-        ],
-        "answer": 2
-    },
-    {
-        "id": 328,
-        "question": "What is the function of the pinna (external ear)?",
-        "options": [
-            "It helps amplify sounD)",
-            "It helps capture and funnel sound waves into the ear canal.",
-            "It balances sound waves in the inner ear.",
-            "It detects high-frequency sounds."
-        ],
-        "answer": 2
-    },
-    {
-        "id": 329,
-        "question": "At which frequency range are humans most sensitive for speech comprehension?",
-        "options": [
-            "20 Hz to 200 Hz.",
-            "200 Hz to 2,000 Hz.",
-            "2,000 Hz to 5,000 Hz.",
-            "10,000 Hz to 20,000 Hz."
-        ],
-        "answer": 3
-    },
-    {
-        "id": 330,
-        "question": "What causes tinnitus?",
-        "options": [
-            "Ear infections only.",
-            "Ringing or buzzing in the ears due to hearing damage or other conditions.",
-            "Loss of ear hair cells.",
-            "Increased sound sensitivity."
-        ],
-        "answer": 2
-    },
-    {
-        "id": 331,
-        "question": "How does the brain use sound localization?",
-        "options": [
-            "By using differences in light intensity.",
-            "By using timing and intensity differences of sound between the ears.",
-            "By isolating the sound frequency.",
-            "By focusing sound through the ear canal."
-        ],
-        "answer": 2
-    },
-    {
-        "id": 332,
-        "question": "Which factor influences a person’s ability to taste salt?",
-        "options": [
-            "Sensory fatigue.",
-            "Sodium ions present in the fooD)",
-            "The number of taste buds on the tongue.",
-            "The texture of fooD)"
-        ],
-        "answer": 2
-    },
-    {
-        "id": 333,
-        "question": "What does genetic variation affect in relation to taste?",
-        "options": [
-            "Sensitivity to sweet flavors.",
-            "Sensitivity to bitter tastes.",
-            "Sensitivity to salty foods.",
-            "Sensitivity to sour flavors."
-        ],
-        "answer": 2
-    },
-    {
-        "id": 334,
-        "question": "How do cultural influences affect taste?",
-        "options": [
-            "Taste preferences are genetically identical across cultures.",
-            "Cultural influences only affect the texture of fooD)",
-            "Cultural experiences and exposure to different foods influence taste preferences.",
-            "Taste preferences are the same for everyone."
-        ],
-        "answer": 3
-    },
-    {
-        "id": 335,
-        "question": "What is the role of the olfactory system?",
-        "options": [
-            "To detect vibrations.",
-            "To distinguish subtle differences in scents.",
-            "To regulate taste preferences.",
-            "To regulate body temperature."
-        ],
-        "answer": 2
-    },
-    {
-        "id": 336,
-        "question": "What is olfactory fatigue?",
-        "options": [
-            "The inability to smell due to illness.",
-            "The decrease in scent sensitivity after continuous exposure to a particular scent.",
-            "The permanent loss of the sense of smell.",
-            "A condition affecting taste sensitivity."
-        ],
-        "answer": 2
-    },
-    {
-        "id": 337,
-        "question": "How does smell affect memory?",
-        "options": [
-            "Smell has no impact on memory.",
-            "Smell can evoke strong emotional responses and trigger memories due to its connection with the limbic system.",
-            "Smell is unrelated to the limbic system.",
-            "Smell is only linked to short-term memory."
-        ],
-        "answer": 2
-    },
-    {
-        "id": 338,
-        "question": "What is the rate of physical growth in infants during the first year?",
-        "options": [
-            "Infants double their birth weight by 2 months and triple it by 8 months.",
-            "Infants double their birth weight by 5 months and triple it by 12 months.",
-            "Infants gain 10 pounds per month during the first year.",
-            "Infants grow 100% in length by the end of the first year."
-        ],
-        "answer": 2
-    },
-    {
-        "id": 339,
-        "question": "By the age of 2, the brain reaches what percentage of its adult size?",
-        "options": [
-            "60%",
-            "80%",
-            "90%",
-            "100%"
-        ],
-        "answer": 2
-    },
-    {
-        "id": 340,
-        "question": "At what age does an infant's vision typically improve to include color recognition and depth perception?",
-        "options": [
-            "2 months",
-            "4 months",
-            "6 months",
-            "12 months"
         ],
         "answer": 3
     },
