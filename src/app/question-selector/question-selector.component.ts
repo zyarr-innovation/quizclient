@@ -45,20 +45,25 @@ export class QuestionSelectorComponent {
     this.selectedMap.set(questionId, checked);
   }
 
-  saveSelectedQuestions() {
-    const selectedQuestions = this.questionsEnglish
-      .filter(q => this.selectedMap.get(q.id))
-      .map(q => ({
-        id: q.id,
-        question: q.question,
-        options: q.options,
-        answer: q.answer,
-      }));
-
-    this.downloadJson(selectedQuestions);
+  downloadSelectedQuestions(filename: string, inQuestions: IQuestion[]) {
+    const selectedQuestions = 
+      inQuestions
+        .filter(q => this.selectedMap.get(q.id))
+        .map(q => ({
+          id: q.id,
+          question: q.question,
+          options: q.options,
+          answer: q.answer,
+        }));
+    this.downloadJson(filename, selectedQuestions);
   }
 
-  private downloadJson(data: any) {
+  saveSelectedQuestions() {
+    this.downloadSelectedQuestions('selected-question-en.json', this.questionsEnglish);
+    this.downloadSelectedQuestions('selected-question-ur.json', this.questionsUrdu);
+  }
+
+  private downloadJson(filename: string, data: IQuestion[]) {
     const blob = new Blob([JSON.stringify(data, null, 2)], {
       type: 'application/json',
     });
@@ -66,7 +71,7 @@ export class QuestionSelectorComponent {
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'selected-questions.json';
+    a.download = filename;
     a.click();
     window.URL.revokeObjectURL(url);
   }
