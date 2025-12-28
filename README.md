@@ -1,59 +1,56 @@
-# NewQuiz
+# QuizClient
+## Summary
+This is the quiz client it is basically build for a particular school.
+There is list of question in src/assets/mybody-en.json or mybody-ur.json
+Note: Both the json must match.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
+## Storing the public key
+Each school data is encrypted using public key of that school that is maintained
+separately. The public key of the school is entered in file: encrption.service.ts
 
-## Development server
+        async encryptResults(results: any): Promise<string> {
+            const publicKey = `-----BEGIN PGP PUBLIC KEY BLOCK-----
 
-To start a local development server, run:
+            xjMEZ10TaBYJKwYBBAHaRw8BAQdAB5KiWwzKb0aRMlztS34jwkV92GQqDruw
+            N6Gmp0FCU17NU3p5LWlubm92YXRvciAoVGhpcyBrZXkgaXMgdXNlZCBmb3Ig
+            TW9taW4gZ2lybCBNeUJvZHkgUXVpeikgPHp5LWlubm92YXRvckBnbWFpbC5j
+            b20+wsATBBMWCgCFBYJnXRNoAwsJBwmQh1V9QHVWYQtFFAAAAAAAHAAgc2Fs
+            dEBub3RhdGlvbnMub3BlbnBncGpzLm9yZ1rHAx4ZVmBmwFV+6I66LnaL4MQZ
+            AZELsRoCMQQvL8eEBRUKCA4MBBYAAgECGQECmwMCHgEWIQQLEsckvKot+6zp
+            SGOHVX1AdVZhCwAAZlEA/1QE+AAijjRkinb96zm33sLsaCKwJ8SWPqfNjnfR
+            4IPGAQCPMtDNvb6UlQPFJle80fKw6HWlt9wKVtU+xwE+gzX0Bc44BGddE2gS
+            CisGAQQBl1UBBQEBB0AunCba90S5W382MHNVewzyuyd27QXkAiPZjFtI6hmf
+            PQMBCAfCvgQYFgoAcAWCZ10TaAmQh1V9QHVWYQtFFAAAAAAAHAAgc2FsdEBu
+            b3RhdGlvbnMub3BlbnBncGpzLm9yZ8dgH3LBOJgBDdfH7v9vUky9vvSh5S/i
+            pSEkJ0PKeNoxApsMFiEECxLHJLyqLfus6Uhjh1V9QHVWYQsAABNJAP42bQog
+            uh6koVW2PLikJ1sd5gGFNZrE0GacM2/28jS7zAEAvBqxlK0avz451XcfZqw2
+            i9TfeylaO06uYB1a2lkR8Q4=1234567890
+            =otG/
 
-```bash
-ng serve
-```
+        -----END PGP PUBLIC KEY BLOCK-----`;
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Encrypt using public key of school.
+The answers are submitted using mail. In order to preserve the sanity
+We encrypt the answer with the public key of the school before submission.
+We uncomment the following function in file: result.component.ts
+If we want to enable the mail or else comments to close the submission.
 
-## Code scaffolding
+        OnSubmit() {
+            alert('Submission is closed now!')
+            // this.quizService.submitScore().subscribe(async (data: any) => {
+            //   //this.restart();
+            //   this.isResultSubmitted = true;
+            //   try {
+            //     const encryptedData = await this.encryptionService.encryptResults(data);
+            //     console.log('Encrypted Data:', encryptedData);
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+            //     // Send the encrypted data via email or other methods
+            //     this.sendEmail(encryptedData);
+            //   } catch (error) {
+            //     console.error('Error encrypting data:', error);
+            //   }
+            // });
+        }
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Building the component.
+THe component is build for particular school and hosted for them.
